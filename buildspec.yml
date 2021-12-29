@@ -17,8 +17,8 @@ phases:
   build:
     commands:
         - echo Build started 
-        - ng config -g cli.warnings.versionMismatch false
         - ng build
+        - ng config -g cli.warnings.versionMismatch false
         
 
 artifacts:
