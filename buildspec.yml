@@ -8,20 +8,17 @@ env:
 phases:
   install:
     runtime-versions:
-        nodejs: 12
+        nodejs: 14
     commands:
         - echo Installing source NPM dependencies...
         - npm install
         - npm install -g @angular/cli
-
   build:
     commands:
         - echo Build started 
-        - ls
-        
-
+        - ng build
 artifacts:
     files:
         - '**/*'
-    type: zip
+    base-directory: 'dist*'
     discard-paths: yes
